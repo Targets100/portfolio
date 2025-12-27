@@ -9,24 +9,17 @@
 html,
 
 body {
-    scroll-behavior: smooth;
-    height: auto;
-    min-height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    /* display: flex;
+    flex-direction: column; */
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     overflow: hidden;
     overflow-y: auto;
-    /* Enables vertical scrolling only when needed */
-    overflow-x: hidden;
-    /* Keeps the page from wiggling sideways */
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    flex-direction: column;
-    color: var(--text-dark);
-    background-color: var(--bg-white);
+    scroll-behavior: smooth;
 }
 
 /* Main header navigation */
@@ -83,14 +76,13 @@ body {
 }
 
 /* Hero Section */
-main {
+/* main {
     flex: 1;
-    /* Takes up remaining space */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 8%;
-}
+} */
 
 .hero-content {
     max-width: 500px;
@@ -98,26 +90,15 @@ main {
     padding: 0 12%;
 }
 
-.greeting {
-    color: var(--primary-purple);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-h1 {
+/* h1 {
     font-size: clamp(2rem, 5vh, 3.5rem);
-    /* Responsive font based on height */
     line-height: 1.1;
     margin-bottom: 1.5rem;
 }
 
 h1 span {
     color: var(--primary-purple);
-}
+} */
 
 .hero-image-container {
     flex: 1;
@@ -136,30 +117,7 @@ h1 span {
     margin-bottom: 20px;
 }
 
-.btn-cv {
-    background-color: var(--primary-purple);
-    color: white;
-    width: 189px;
-    height: 45px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    
-    /* Centering the text and icon inside the button */
-    display: inline-flex;
-    align-items: center; 
-    justify-content: center; 
-    gap: 10px; 
 
-    /* Positioning the button relative to the image container */
-    margin-top: -60px; /* Pulls it up into the image area */
-    margin-right: 24%;  /* Small margin to keep it near the right edge */
-    align-self: flex-end; /* Ensures the flex item itself aligns to the right */
-
-    font-size: 1rem;
-    font-weight: 600;
-    z-index: 10; /* Keeps it on top of the image */
-}
 
 /* End of the header */
 

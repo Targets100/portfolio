@@ -1,0 +1,116 @@
+.top-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    /* background-color: salmon; */
+
+    justify-content: space-between;
+    /* align-items: flex-start;
+    align-content: flex-start; */
+}
+
+.top-two-boxes {
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 2%;
+    
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.top-left-box {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10% 5% 0 5%;
+
+    /* margin: 5%; */
+    /* background-color: lightblue; */
+}
+
+.top-right-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.greeting {
+    color: var(--primary-purple);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#career-start {
+    font-size: clamp(2rem, 5vh, 3.5rem);
+    /* Responsive font based on height */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+#career-start span {
+    color: var(--primary-purple);
+}
+
+.hero-description {
+    font-size: 1.2rem;
+}
+
+.hero-portrait {
+    width: 100%;   /* fill the container width */
+    height: auto;  /* scale height proportionally */
+    display: block;
+    margin-bottom: 20px;
+    max-width: 600px; /* optional: prevents image from being too huge */
+}
+
+.btn-cv {
+
+    background-color: var(--primary-purple);
+    color: white;
+    width: 189px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    
+    /* Centering the text and icon inside the button */
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+
+    /* Positioning the button relative to the image container */
+    margin-top: -120px; /* Pulls it up into the image area */
+    margin-right: 24%;  /* Small margin to keep it near the right edge */
+    align-self: flex-end; /* Ensures the flex item itself aligns to the right */
+
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 10; /* Keeps it on top of the image */
+}
+
+.top-bottom-box {
+    /* background-color: lightgoldenrodyellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 2%;
+}
+
+.top-bottom-box-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
