@@ -36,10 +36,10 @@
 
 .top-right-box {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-}
 
+    position: relative;
+    display: inline-block; /* or block if you want full width */
+}
 
 .greeting {
     color: var(--primary-purple);
@@ -67,15 +67,16 @@
 }
 
 .hero-portrait {
-    width: 100%;   /* fill the container width */
-    height: auto;  /* scale height proportionally */
+    width: 100%;
+    height: auto; /* keeps aspect ratio */
     display: block;
-    margin-bottom: 20px;
-    max-width: 600px; /* optional: prevents image from being too huge */
 }
 
 .btn-cv {
-
+    position: absolute;
+    top: 50%;      /* start roughly halfway down the image */
+    right: 0;    /* start at the right edge of the image */
+    
     background-color: var(--primary-purple);
     color: white;
     width: 189px;
@@ -84,20 +85,13 @@
     border: none;
     cursor: pointer;
     
-    /* Centering the text and icon inside the button */
     display: inline-flex;
     align-items: center; 
     justify-content: center; 
     gap: 10px; 
-
-    /* Positioning the button relative to the image container */
-    margin-top: -120px; /* Pulls it up into the image area */
-    margin-right: 24%;  /* Small margin to keep it near the right edge */
-    align-self: flex-end; /* Ensures the flex item itself aligns to the right */
-
     font-size: 1rem;
     font-weight: 600;
-    z-index: 10; /* Keeps it on top of the image */
+    z-index: 10;
 }
 
 .top-bottom-box {
