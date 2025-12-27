@@ -31,15 +31,13 @@ body {
 
 /* Main header navigation */
 /* Navigation */
-nav {
+/* nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Slightly increased top/bottom padding for the image logo */
     padding: 3vh 8%;
     flex-shrink: 0;
-    /* Keeps nav height fixed */
-}
+} */
 
 .logo {
     display: flex;

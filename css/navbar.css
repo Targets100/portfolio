@@ -1,0 +1,110 @@
+.navbar {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Define the shape and color of the hamburger lines */
+.navbar-toggler span {
+    display: block;
+    background-color: black;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+}
+
+
+/* top line needs a little padding */
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+/**
+ * Animate collapse into X.
+ */
+
+/* top line rotates 45 degrees clockwise and moves up and in a bit to close the center of the X in the center of the button */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+/* center line goes transparent */
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+/* bottom line rotates 45 degrees counter clockwise, in, and down a bit to close the center of the X in the center of the button  */
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg) ;
+}
+
+
+/**
+ * Animate collapse open into hamburger menu
+ */
+
+/* top line moves back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+/* middle line goes back to regular color and opacity */
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+/* bottom line goes back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+
+
+.nav-link:after {
+    content: '';
+	display: block;
+	margin: auto;
+	height: 1px;
+	width: 100%;
+	background: black;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.nav-link:hover:after {
+    width: 0%;
+	background: black;
+} 
+
+.navbar-nav .nav-link {
+    color: black;
+}
+
+.dropdown-toggle:after {
+    border-top: 1px solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+a:hover {
+    color: #493826;
+    text-decoration: underline;
+    transition: .3s;
+}
+
+
+/* .dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: -0.7em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+ */
