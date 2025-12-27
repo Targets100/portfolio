@@ -243,3 +243,71 @@ h1 span {
 /* End of cases section */
 
 /* Footer Section */
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    background-color: var(--bg-white);
+    flex-shrink: 0;
+    /* Keeps footer height fixed */
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 10000px;
+    height: 100%;
+    padding: 20px;
+}
+
+/* 2. Content Layout */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    flex-grow: 1; /* Takes up available space to push footer down */
+}
+
+.avatar-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* 3. Clickable Button */
+.purple-button {
+    display: inline-block;
+    background-color: #9c73cf;
+    color: white;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 100px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-links {
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 10px;
+}
+
+/* End of footer section */
