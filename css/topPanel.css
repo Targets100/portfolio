@@ -6,14 +6,12 @@
     /* background-color: salmon; */
 
     justify-content: space-between;
-    /* align-items: flex-start;
-    align-content: flex-start; */
+    padding-left: 5%;
+    padding-right: 5%
 }
 
 .top-two-boxes {
-    padding-top: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-top: 2%;
     gap: 2%;
     
 
@@ -68,10 +66,9 @@
 
 .btn-cv {
     position: absolute;
-    position: absolute;
     margin-left: auto;
-    bottom: 60px;
-    left: 400px;
+    bottom: 40px;
+    left: 300px;
     
     background-color: var(--primary-purple);
     color: white;
