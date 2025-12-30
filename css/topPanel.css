@@ -29,16 +29,12 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding: 10% 5% 0 5%;
-
-    /* margin: 5%; */
     /* background-color: lightblue; */
 }
 
 .top-right-box {
     flex: 1;
-
-    position: relative;
-    display: inline-block; /* or block if you want full width */
+    padding-top: 4%;
 }
 
 .greeting {
@@ -66,16 +62,16 @@
     font-size: 1.2rem;
 }
 
-.hero-portrait {
-    width: 100%;
-    height: auto; /* keeps aspect ratio */
-    display: block;
+.img-box {
+    position: relative;
 }
 
 .btn-cv {
     position: absolute;
-    top: 50%;      /* start roughly halfway down the image */
-    right: 0;    /* start at the right edge of the image */
+    position: absolute;
+    margin-left: auto;
+    bottom: 60px;
+    left: 400px;
     
     background-color: var(--primary-purple);
     color: white;
@@ -107,4 +103,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.top-bottom-box-text h2 {
+    color: var(--primary-purple);
 }
