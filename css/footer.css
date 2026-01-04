@@ -18,24 +18,40 @@ footer {
 .footer-right-box {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	/* justify-content: center; */
 	align-items: center;
+    margin-top: 50px;
 
 	/* display: flex;
     flex-direction: column;
     justify-content: space-between; */
 }
 
+.footer-left, .footer-dummy-right {
+    flex: 1;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-avatar {
+    width: 250px;
+    height: 317px;
+}
+
 .footer-text {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
 
 	text-align: center;
 }
 
 .contact-button {
+    margin-top: 20px;
 	width: 300px;
 	height: 50px;
 	color: white;
