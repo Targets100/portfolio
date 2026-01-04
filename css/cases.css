@@ -1,0 +1,81 @@
+/* 1. Panel & Container: strict no-scroll policy */
+.panel {
+    /* Your existing CSS... */
+    overflow: hidden; /* Cut off anything that tries to escape */
+}
+
+.cases {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    /* CHANGE: prevent the container itself from pushing out */
+    min-height: 0; 
+}
+
+/* 2. The Case: Allow shrinking! */
+.case {
+    flex: 1;
+    transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+    border-radius: 8px;
+    
+    /* CRITICAL FIX: This allows the box to shrink smaller than its text content 
+       so it actually fits on the screen. */
+    min-height: 0; 
+    
+    /* Optional: prevents a jerky border flicker */
+    border: 1px solid transparent; 
+}
+
+/* 3. The Hover State */
+.case:hover {
+    /* Reduced expansion slightly to prevent extreme squashing of other cards */
+    flex: 2.5; 
+}
+
+.case a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #333;
+    background-color: #f4f4f9;
+    transition: box-shadow 0.3s;
+}
+
+/* 4. The Image: Fix the "Zoom" effect */
+.case img {
+    width: 33.3333%;
+    height: 100%;
+    
+    /* Maintains aspect ratio without stretching */
+    object-fit: cover; 
+    
+    /* FIX: Anchors the image to the left/center. 
+       Prevents the dizzying "zoom in to center" effect when height grows. */
+    object-position: left center; 
+}
+
+.case-text {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Ensure text gets cut off gracefully instead of forcing the box open */
+    overflow: hidden; 
+}
+
+/* Truncate text if the non-hovered cards get too small */
+.case-text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit text to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

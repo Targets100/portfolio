@@ -8,38 +8,30 @@
 /* Essential for "No Scroll" behavior */
 html,
 
-body {
-    scroll-behavior: smooth;
-    height: auto;
-    min-height: 100%;
+body, main {
+    font-family: 'Montserrat', sans-serif;
+    /* display: flex;
+    flex-direction: column; */
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     overflow: hidden;
     overflow-y: auto;
-    /* Enables vertical scrolling only when needed */
-    overflow-x: hidden;
-    /* Keeps the page from wiggling sideways */
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    flex-direction: column;
-    color: var(--text-dark);
-    background-color: var(--bg-white);
+    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 /* Main header navigation */
 /* Navigation */
-nav {
+/* nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Slightly increased top/bottom padding for the image logo */
     padding: 3vh 8%;
     flex-shrink: 0;
-    /* Keeps nav height fixed */
-}
+} */
 
 .logo {
     display: flex;
@@ -85,14 +77,13 @@ nav {
 }
 
 /* Hero Section */
-main {
+/* main {
     flex: 1;
-    /* Takes up remaining space */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 8%;
-}
+} */
 
 .hero-content {
     max-width: 500px;
@@ -100,26 +91,15 @@ main {
     padding: 0 12%;
 }
 
-.greeting {
-    color: var(--primary-purple);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-h1 {
+/* h1 {
     font-size: clamp(2rem, 5vh, 3.5rem);
-    /* Responsive font based on height */
     line-height: 1.1;
     margin-bottom: 1.5rem;
 }
 
 h1 span {
     color: var(--primary-purple);
-}
+} */
 
 .hero-image-container {
     flex: 1;
@@ -138,30 +118,7 @@ h1 span {
     margin-bottom: 20px;
 }
 
-.btn-cv {
-    background-color: var(--primary-purple);
-    color: white;
-    width: 189px;
-    height: 45px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    
-    /* Centering the text and icon inside the button */
-    display: inline-flex;
-    align-items: center; 
-    justify-content: center; 
-    gap: 10px; 
 
-    /* Positioning the button relative to the image container */
-    margin-top: -60px; /* Pulls it up into the image area */
-    margin-right: 24%;  /* Small margin to keep it near the right edge */
-    align-self: flex-end; /* Ensures the flex item itself aligns to the right */
-
-    font-size: 1rem;
-    font-weight: 600;
-    z-index: 10; /* Keeps it on top of the image */
-}
 
 /* End of the header */
 
@@ -208,20 +165,8 @@ h1 span {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #222222;
-  background-color: #B4B0B7; /* Match your background colors */
-  overflow: hidden;
-  height: 250px; /* The "Closed" height */
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth expansion */
-  border-radius: 8px;
-}
-
-.project-card2{
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #222222;
-  background-color: #DADCE6; /* Match your background colors */
+  color: #333;
+  background-color: #f4f4f9; /* Match your background colors */
   overflow: hidden;
   height: 250px; /* The "Closed" height */
   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth expansion */
@@ -230,12 +175,6 @@ h1 span {
 
 /* The Expansion Effect */
 .project-card:hover {
-  height: 500px; /* The "Open" height - adjust to show full image */
-  box-shadow: 0 20px-40px rgba(0,0,0,0.1);
-  transform: translateY(-5px);
-}
-
-.project-card2:hover {
   height: 500px; /* The "Open" height - adjust to show full image */
   box-shadow: 0 20px-40px rgba(0,0,0,0.1);
   transform: translateY(-5px);
@@ -261,105 +200,3 @@ h1 span {
 /* End of cases section */
 
 /* Footer Section */
-
-footer {
-    text-align: center;
-    padding: 20px ;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    align-items: center;
-    background-color: var(--bg-white);
-    flex-shrink: 0;
-    /* Keeps footer height fixed */
-}
-
-footer {
-    width: 80%;             /* Ensures the line stretches across the container */
-    border-top: 2px solid #a37ed3; /* Creates the purple line */
-    padding-top: 0px;       /* Adds space between the line and your text */
-    text-align: center;      /* Keeps the links centered under the line */
-    margin-top: -8px;        /* Adds space between the main content and the line */
-}
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 10000px;
-    height: 100%;
-    padding: 20px;
-}
-
-/* 2. Content Layout */
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    flex-grow: 1; /* Takes up available space to push footer down */
-}
-
-.avatar-img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    margin-left: 300px;
-
-}
-
-footer p {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-/* 3. Clickable Button */
-.text-side {
-    text-align: center; /* This moves the button and all text to the middle of the column */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Ensures the button itself is centered if it's a flex item */
-    margin-right: 300px;
-    margin-bottom: 20px;
-}
-
-.text-side h1 {
-    font-size: clamp(2rem, 5vh, 3.5rem);
-    /* Responsive font based on height */
-    line-height: 1.1;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.text-side p {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: light;
-    line-height: normal;
-    margin-bottom: 50px;
-}
-
-.purple-button {
-    display: inline-block;
-    background-color: #9c73cf;
-    color: white;
-    text-decoration: none;
-    padding: 16px 60px;
-    border-radius: 10px;
-    font-weight: medium;
-    font-size: 20px;
-    margin-left: 0px;
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-.nav-links {
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 40px;
-}
-
-/* End of footer section */

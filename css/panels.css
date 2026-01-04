@@ -1,0 +1,16 @@
+.panel {
+	position: relative;
+	width: 100%;
+	height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    /* Override the fixed panel height only on mobile */
+    .panel {
+        height: auto; 
+        min-height: 100vh; /* Optional: ensures it's at least full screen */
+    }
+}
