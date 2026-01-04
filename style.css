@@ -165,8 +165,20 @@ h1 span {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #333;
-  background-color: #f4f4f9; /* Match your background colors */
+  color: #222222;
+  background-color: #B4B0B7; /* Match your background colors */
+  overflow: hidden;
+  height: 250px; /* The "Closed" height */
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth expansion */
+  border-radius: 8px;
+}
+
+.project-card2{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #222222;
+  background-color: #DADCE6; /* Match your background colors */
   overflow: hidden;
   height: 250px; /* The "Closed" height */
   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth expansion */
@@ -175,6 +187,12 @@ h1 span {
 
 /* The Expansion Effect */
 .project-card:hover {
+  height: 500px; /* The "Open" height - adjust to show full image */
+  box-shadow: 0 20px-40px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+.project-card2:hover {
   height: 500px; /* The "Open" height - adjust to show full image */
   box-shadow: 0 20px-40px rgba(0,0,0,0.1);
   transform: translateY(-5px);
@@ -200,3 +218,105 @@ h1 span {
 /* End of cases section */
 
 /* Footer Section */
+
+footer {
+    text-align: center;
+    padding: 20px ;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    background-color: var(--bg-white);
+    flex-shrink: 0;
+    /* Keeps footer height fixed */
+}
+
+footer {
+    width: 80%;             /* Ensures the line stretches across the container */
+    border-top: 2px solid #a37ed3; /* Creates the purple line */
+    padding-top: 0px;       /* Adds space between the line and your text */
+    text-align: center;      /* Keeps the links centered under the line */
+    margin-top: -8px;        /* Adds space between the main content and the line */
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 10000px;
+    height: 100%;
+    padding: 20px;
+}
+
+/* 2. Content Layout */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    flex-grow: 1; /* Takes up available space to push footer down */
+}
+
+.avatar-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-left: 300px;
+
+}
+
+footer p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* 3. Clickable Button */
+.text-side {
+    text-align: center; /* This moves the button and all text to the middle of the column */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures the button itself is centered if it's a flex item */
+    margin-right: 300px;
+    margin-bottom: 20px;
+}
+
+.text-side h1 {
+    font-size: clamp(2rem, 5vh, 3.5rem);
+    /* Responsive font based on height */
+    line-height: 1.1;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.text-side p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: light;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.purple-button {
+    display: inline-block;
+    background-color: #9c73cf;
+    color: white;
+    text-decoration: none;
+    padding: 16px 60px;
+    border-radius: 10px;
+    font-weight: medium;
+    font-size: 20px;
+    margin-left: 0px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-links {
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 40px;
+}
+
+/* End of footer section */
