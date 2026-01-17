@@ -1,0 +1,221 @@
+:root {
+    --primary-purple: #9b6bc0;
+    --text-dark: #222222;
+    --text-light: #222222;
+    --bg-white: #ffffff;
+}
+
+/* Essential for "No Scroll" behavior */
+html,
+
+body, main {
+    font-family: 'Montserrat', sans-serif;
+    /* display: flex;
+    flex-direction: column; */
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* Main header navigation */
+/* Navigation */
+/* nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 8%;
+    flex-shrink: 0;
+} */
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* This aligns the items horizontally to the center */
+    justify-content: center; 
+    /* This ensures the container spans the full width of the page */
+    width: 100%;
+}
+
+.logo-img {
+    height: 80px;
+    width: 2300px;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: multiply;
+    filter: contrast(1.1);
+}
+
+
+/* Container Styles */
+/* --- LAYOUT SECTION --- */
+.contact-section {
+    display: flex;
+    justify-content: center; /* Center everything horizontally */
+    align-items: center;    /* Center everything vertically */
+    gap: 80px;              /* Space between Left and Right columns */
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+    flex-wrap: wrap;        /* Allows stacking on mobile screens */
+}
+
+/* --- LEFT COLUMN STYLES --- */
+.contact-left {
+    flex: 1;                /* Takes up equal space */
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.contact-header p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    position: relative;
+    z-index: 1;
+    width: 80%;           /* Adjust image size relative to blob */
+    max-height: 110%;     /* Allows image to stick out top slightly if needed */
+    object-fit: contain;
+    /* OPTIONAL: If your image has a white bg, use this to blend it (won't be perfect) */
+    /* mix-blend-mode: multiply; */ 
+}
+
+/* CONTACT ICONS ROW */
+.contact-details {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: #333;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- RIGHT COLUMN (FORM) STYLES --- */
+.contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    background: white;
+    width: 100%;
+    max-width: 450px; 
+    padding: 1px;
+    border-radius: 20px;
+    
+    /* Gradient Border Logic */
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(to bottom right, #87CEFA, #9370DB);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.required { color: #d9534f; }
+
+/* Underline Inputs */
+input[type="text"], input[type="email"] {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 8px 0;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+}
+input:focus { border-bottom-color: #9370DB; }
+
+/* Grey Box Textarea */
+textarea {
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    height: 120px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+/* send (Right Aligned) */
+.form-footer {
+    display: flex;
+    justify-content: flex-end; /* Pushes button to the right */
+    margin-top: 10px;
+}
+
+.btn-send {
+    background: linear-gradient(to right, #9370DB, #a18cd1);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 6px; /* Less rounded than before to match image */
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.2s;
+}
+
+.btn-send:hover { opacity: 0.9; }
+
+/*the real footer style*/
+.footer-links, .footer-madewith {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    color: #222222;
+    margin-top: 30px;
+}
+
+
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Stack vertically on phones */
+        gap: 40px;
+    }
+}
+
