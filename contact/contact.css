@@ -1,0 +1,57 @@
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5%;
+}
+
+.contact-left-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact-right-box {
+    background-color: salmon;
+    width: 30%;
+    border-radius: 15px;
+    border: 4px solid purple;
+    box-shadow: 25px 40px 40px 0px rgba(0, 0, 0, 0.4);
+    padding: 2%;
+}
+
+.contact-left-top-text {
+    text-align: center;
+}
+
+.contact-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-left-bottom-info {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.underline-input {
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.underline-input:focus {
+  box-shadow: none;
+  border-bottom-color: #0d6efd; /* Bootstrap primary */
+}
