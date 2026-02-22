@@ -44,7 +44,7 @@
 
 	<body>
 		<main>
-			<section class="panel" id="top">
+			<section class="panel">
 				<nav class="navbar navbar-expand-lg">
 					<!-- Logo (always visible, not part of toggle) -->
 					<a class="navbar-brand ml-5" href="#">
@@ -106,123 +106,30 @@
 					</div>
 				</nav>
 
-				<div class="contact-container">
-					<div class="contact-left-box">
-						<div class="contact-left-top-text">
-							<h5><b>I would love to hear from you!</b></h5>
-							<p>Fill in the form or contact me in other ways to know more.</p>
-						</div>
-						<div class="contact-image">
+				<div id="contact-container">
+					<div class="footer-container">
+						<div class="footer-left">
+							<div></div>
 							<img
-								alt="contact me olivia Portrait"
-								src="../images/Contact image.png"
+								src="../images/chatgptpicture.png"
+								alt="Profile"
+								class="footer-avatar"
 							/>
 						</div>
-
-						<div class="contact-left-bottom-info">
-							<div>
-								<i class="bi bi-linkedin" style="margin-right: 5px; color: var(--primary-purple)"></i>
-								<span><a href="https://www.linkedin.com/in/olivia-trulsson-702458290/">Olivia trulsson</a></span>
+						<div class="footer-right-box">
+							<div class="footer-text">
+								<h4>Let's get in contact!</h4>
+								<p>
+									I'd be happy to grab a coffee and chat further.<br />
+									Click the contact button and I'll get back to you as soon as I
+									can.
+								</p>
 							</div>
-							<div>
-								<i class="bi bi-envelope-fill" style="margin-right: 5px; color: var(--primary-purple)"></i>
-								<span><a href="oliviatrulsson@gmail.com">oliviatrulsson@gmail.com</a></span>
-							</div>
-							<div>
-								<i
-									class="bi bi-telephone-fill"
-									style="margin-right: 5px; color: var(--primary-purple)"
-								></i
-								><span>+46 733 23 36 60</span>
-							</div>
+							<button type="button" class="btn contact-button">
+								Contact me 🤝
+							</button>
 						</div>
-					</div>
-					<div class="contact-right-box">
-						<div class="container">
-							<!-- Contact Form -->
-<form id="contact-form">
-  <div class="mb-4">
-    <label class="form-label">Name</label>
-    <input
-      type="text"
-      name="name"
-      class="form-control underline-input"
-      placeholder="Your name"
-      required
-    />
-  </div>
-
-  <div class="mb-4">
-    <label class="form-label">Email</label>
-    <input
-      type="email"
-      name="email"
-      class="form-control underline-input"
-      placeholder="Your email"
-      required
-    />
-  </div>
-
-  <div class="mb-4">
-    <label class="form-label">Message</label>
-    <textarea
-      name="message"
-      class="form-control underline-input"
-      rows="4"
-      placeholder="Your message"
-      required
-    ></textarea>
-  </div>
-
-  <!-- Honeypot (spam protection) -->
-  <input type="text" name="company" tabindex="-1" autocomplete="off" style="display:none">
-
-  <!-- Button row -->
-  <div class="d-flex justify-content-end">
-    <button
-      type="submit"
-      class="btn btn-primary d-flex align-items-center gap-2 submit-button"
-      id="submit-btn"
-    >
-      <span class="btn-text">Send</span>
-      <i class="bi bi-send-fill"></i>
-    </button>
-  </div>
-</form>
-
-<!-- Toast container -->
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-  <div
-    id="form-toast"
-    class="toast align-items-center text-bg-success border-0"
-    role="alert"
-    aria-live="assertive"
-    aria-atomic="true"
-  >
-    <div class="d-flex">
-      <div class="toast-body" id="toast-body">
-        Message sent successfully!
-      </div>
-      <button
-        type="button"
-        class="btn-close btn-close-white me-2 m-auto"
-        data-bs-dismiss="toast"
-        aria-label="Close"
-      ></button>
-    </div>
-  </div>
-</div>
-
-<!-- Bootstrap JS (required for toasts) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<!-- Your JS -->
-<script src="contact.js"></script>
-
-						</div>
+						<div class="footer-dummy-right"></div>
 					</div>
 				</div>
 			</section>
