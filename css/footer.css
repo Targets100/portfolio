@@ -1,18 +1,23 @@
 footer {
-	padding-left: 2%;
-	padding-right: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
 
     margin-bottom: 40px;
+
+	margin-top: 2%;
+	border-top: 3px solid var(--primary-purple);
 }
 
 .footer-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: stretch;
+	width: 100%;
+	/* align-items: stretch; */
 
-	margin-top: 30px;
-	border-bottom: 3px solid var(--primary-purple);
+	/* margin-top: 30px; */
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .footer-right-box {
