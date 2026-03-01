@@ -1,0 +1,8 @@
+:root {
+    --case-color: #2a1d36;
+    --case-background: #c0bcc3;
+}    
+
+.case-bottom .simway {
+    background-color: #c0bcc3;
+}
