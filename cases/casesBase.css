@@ -31,7 +31,13 @@
     padding-right: 20%;
 
     background-color: var(--case-background);
+    
 }
+
+.case-bottom h1, h2{
+    color: var(--case-color);
+}
+
 
 .case-info {
     display: flex;
@@ -41,6 +47,7 @@
 
     padding-bottom: 2%;
     border-bottom: 2px solid var(--case-color);
+    margin-bottom: 70px;
 }
 
 .case-info-icons {
@@ -48,7 +55,7 @@
     flex-direction: row;
     justify-content: center;
     gap: 10%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .case-info-box {
@@ -81,3 +88,11 @@
     align-self: center;
 }
 
+.case-text-section {
+    border-bottom: 2px solid var(--case-color);
+    margin-bottom: 40px;
+}
+
+.case-mediumweight {
+    font-weight: 500;
+}

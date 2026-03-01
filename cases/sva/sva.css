@@ -1,0 +1,8 @@
+:root {
+    --case-color: #ac1f0c;
+    --case-background: #efefef;
+}    
+
+.case-bottom .sva {
+    background-color: #efefef;
+}
