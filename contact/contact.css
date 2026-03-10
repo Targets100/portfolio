@@ -15,3 +15,8 @@
 .footer-container {
     border-bottom: 3px solid var(--primary-purple);
 }
+
+.contact-button:hover {
+    background-color: var(--primary-purple);
+    color: white;
+}
