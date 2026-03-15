@@ -1,0 +1,79 @@
+/* floating container */
+.toc {
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* clickable area */
+.toc-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 14px;
+  cursor: pointer;
+}
+
+/* visible line */
+.toc-item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 3px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+/* hover effect */
+.toc-item:hover::after {
+  width: 32px;
+  height: 4px;
+  background: rgba(0,0,0,0.85);
+}
+
+/* tooltip */
+.toc-item::before {
+  content: attr(data-label);
+  position: absolute;
+  right: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+
+  z-index: 2;
+}
+
+/* show tooltip */
+.toc-item:hover::before {
+  opacity: 1;
+}
+
+
+
+  /* height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  margin-right: 10px; */
